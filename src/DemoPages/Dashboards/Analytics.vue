@@ -319,8 +319,8 @@
             Money
         },
         data: () => ({
-            heading: 'Modelo de Fraudes',
-            subheading: '',
+            heading: 'Simulador',
+            subheading: 'Simulador de ganho financeiro com a contratação do Scoring',
             icon: 'pe-7s-light icon-gradient bg-tempting-azure',
             descricao_indicacao_percentual: null,
             descricao_indicacao_saving: null,

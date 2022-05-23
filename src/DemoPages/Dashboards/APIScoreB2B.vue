@@ -125,8 +125,8 @@
             setInterval(() => (this.toggle = !this.toggle), 1111);
         },
         data: () => ({
-            heading: 'API Score B2B',
-            subheading: 'A API Score B2B fornece dois endpoints para ajudar a evitar fraudes. Um deles retorna uma pontuação da probabilidade de um CEP correspondente ao local de moradia do cliente. Ao fazer isso, a pontuação funciona como uma diretriz para ajudar a evitar fraudes. O outro endpoint valida se o documento e o número de telefone fazem parte do banco de dados do nosso cliente para ajudar a evitar fraudes com números falsos.',
+            heading: 'Match',
+            subheading: 'Reduza os riscos em transações eletrônicas por meio de validações digitais de identidade e inteligência antifraude.',
             icon: 'pe-7s-credit icon-gradient bg-tempting-azure',
             cep:'07600-973',
             telefone:'(11)91234-5678',

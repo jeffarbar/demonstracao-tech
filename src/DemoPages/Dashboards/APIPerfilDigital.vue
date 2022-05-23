@@ -14,15 +14,6 @@
 
                                 <div class="col-md-3">
                                     <div class="position-relative form-group">
-                                        Produto:
-                                        <input placeholder="PRODUTO" 
-                                            v-model="produto" 
-                                            type="text" class="mb-1 form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="position-relative form-group">
                                         Número de CPF:
                                         <input placeholder="627.585.390-55" 
                                             v-model="cpf"
@@ -113,8 +104,8 @@
             setInterval(() => (this.toggle = !this.toggle), 1111);
         },
         data: () => ({
-            heading: 'API Perfil Digital',
-            subheading: 'API do Perfil Digital para identificação do Score de clientes. Efetua a pesquisa de um score a partir de um determinado CPF para um determinado Produto especificado pelo modelo análitico da aplicação.',
+            heading: 'Scoring',
+            subheading: 'Otimize informações para a tomada de decisões de risco no processo de análise de crédito ao consumidor.',
             icon: 'pe-7s-piggy icon-gradient bg-tempting-azure',
             produto:'PRODUTO',
             cpf: '627.585.390-55',

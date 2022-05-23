@@ -2,9 +2,11 @@
     <div class="app-page-title" style="background:#F2F4FF;" >
         <div class="page-title-wrapper">
             <div class="page-title-heading">
+                <!--
                 <div class="page-title-icon">
                     <i :class="icon"/>
                 </div>
+                -->
                 <div>
                     <b>{{heading}}</b>
                     <div

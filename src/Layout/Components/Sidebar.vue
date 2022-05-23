@@ -46,26 +46,16 @@
                         title: 'Menu',
                     },
                     {
-                        title: 'Modelo',
-                        icon: 'pe-7s-calculator',
-                        child: [
-                            {
-                                href: '/',
-                                title: 'Fraude',
-                            },
-                        ]
-                    },
-                    {
-                        title: 'API',
+                        title: 'Risk & Credit Management',
                         icon: 'pe-7s-filter',
                         child: [
                             {
                                 href: '/api/perfil-digital',
-                                title: 'Perfil Digital',
+                                title: 'Scoring',
                             },
                             {
-                                href: '/api/score-b2b',
-                                title: 'Score B2B',
+                                href: '/analytics',
+                                title: 'Simulador',
                             },
 
                             /*
@@ -84,6 +74,17 @@
                             */
                         ]
                     },
+                    {
+                        title: 'Digital Identity & Fraud',
+                        icon: 'pe-7s-calculator',
+                        child: [
+                            {
+                                href: '/api/score-b2b',
+                                title: 'Match',
+                            }
+                        ]
+                    },
+
 
                     /*
                     {

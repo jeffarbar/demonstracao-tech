@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+
 Vue.use(Router);
 
 export default new Router({
@@ -9,10 +10,25 @@ export default new Router({
     },
     routes: [
 
+        // login
+        /*
+        {
+            path: "/",
+            component: () => import('../DemoPages/Dashboards/Login.vue'),
+            name: 'login',
+            redirect: "/login",
+            children: [
+              {
+                path: "login",
+                name: "login"
+              }
+            ]
+        },
+        */
         // Dashboards
 
         {
-            path: '/',
+            path: '/analytics',
             name: 'analytics',
             component: () => import('../DemoPages/Dashboards/Analytics.vue'),
         },
