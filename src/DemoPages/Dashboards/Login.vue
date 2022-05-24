@@ -7,10 +7,9 @@
                   
 
                     <div class="modal-body"  style="background-color:#F2F4FF;">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <img width="190" height="190" src="@/assets/images/telefonica_login.png" alt="">
-                         <br><br>
+                        <p class="aligncenter">
+                            <img width="190" height="190" src="@/assets/images/telefonica_login.png" alt="">
+                        </p>
                         
                         <b-form-group id="exampleInputGroup1"
                                         label-for="exampleInput1"
@@ -127,5 +126,8 @@
         color: #0066FF;
         background-color: #F2F4FF;
         border-color: #0066FF;
+    }
+    .aligncenter {
+        text-align: center;
     }
 </style>
