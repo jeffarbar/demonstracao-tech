@@ -133,11 +133,11 @@
             setInterval(() => (this.toggle = !this.toggle), 1111);
         },
         data: () => ({
-            heading: 'Match',
+            heading: 'Antifraude',
             subheading: 'Reduza os riscos em transações eletrônicas por meio de validações digitais de identidade e inteligência antifraude.',
             icon: 'pe-7s-credit icon-gradient bg-tempting-azure',
             cep:'04313-210',
-            telefone:'(11)998834485',
+            telefone:'(11)99883-4485',
             cpf: '102.663.067-30',
             score: 0,
             mostra_grafico: false,

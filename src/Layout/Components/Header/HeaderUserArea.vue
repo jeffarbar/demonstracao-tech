@@ -7,17 +7,8 @@
                         <div class="widget-heading" style="color:#F2F4FF">Big Data&nbsp;&nbsp;</div>
                     </div>
                     <div class="widget-content-left">
-                        <b-dropdown toggle-class="p-0 mr-2" menu-class="dropdown-menu-lg" variant="link" right>
-                            <span slot="button-content">
-                                <!--
-                                <div class="icon-wrapper icon-wrapper-alt rounded-circle">
-                                    <img width="64" height="64" class="rounded-circle" src="@/assets/images/avatars/telefonica.png" alt="">
-                                </div>
-                                -->
-                                 <img width="80" height="80" class="rounded-circle" src="@/assets/images/avatars/telefonica.png" alt="">
-                            </span>
-                            <button type="button" tabindex="0" @click="logoff" class="dropdown-item">Sair</button>
-                        </b-dropdown>
+                        <img width="80" height="80" class="rounded-circle" src="@/assets/images/avatars/telefonica.png" alt="">
+   
                         <!--
                         <b-dropdown toggle-class="p-0 mr-2" menu-class="dropdown-menu-lg" variant="link" right>
                             <span slot="button-content">
@@ -94,7 +85,7 @@
                 let usuario = this.$localStorage.get('usuario')
 
                 if(usuario == null || usuario == undefined){
-                    this.logoff()
+                    //this.logoff()
                 }
             },
             logoff(){

@@ -51,7 +51,7 @@
                         child: [
                             {
                                 href: '/api/perfil-digital',
-                                title: 'Scoring',
+                                title: 'Perfil Digital',
                             },
                             {
                                 href: '/analytics',
@@ -80,7 +80,18 @@
                         child: [
                             {
                                 href: '/api/score-b2b',
-                                title: 'Match',
+                                title: 'Antifraude',
+                            }
+                        ]
+                    },
+
+                    {
+                        title: 'Fraudes de SIM Swap',
+                        icon: 'pe-7s-medal',
+                        child: [
+                            {
+                                href: '/api/score-simswap',
+                                title: 'SIM Swap',
                             }
                         ]
                     },

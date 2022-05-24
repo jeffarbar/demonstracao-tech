@@ -12,15 +12,22 @@ export default new Router({
 
         // login
        
-
+        /*
         {
             path: '/',
             name: 'login',
             meta: {layout: 'userpages'},
             component: () => import('../DemoPages/Dashboards/Login.vue'),
         },
+        */
 
-
+       {
+            path: '/',
+            name: 'perfil-digital',
+            redirect: "/api/perfil-digital",
+            meta: {layout: 'default'},
+            component: () => import('../DemoPages/Dashboards/Analytics.vue'),
+        },
 
         
         // Dashboards
@@ -46,6 +53,13 @@ export default new Router({
             name: 'score-b2b',
             meta: {layout: 'default'},
             component: () => import('../DemoPages/Dashboards/APIScoreB2B.vue'),
+        },
+
+        {
+            path: '/api/score-simswap',
+            name: 'score-simswap',
+            meta: {layout: 'default'},
+            component: () => import('../DemoPages/Dashboards/APIScoreSimSWAP.vue'),
         },
 
 

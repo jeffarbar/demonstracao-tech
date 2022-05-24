@@ -4,17 +4,17 @@ export default {
   extends: HorizontalBar,
   mounted() {
     this.renderChart({
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ['Menos de x dias' , 'Mais de x dias',''],
       datasets: [
         {
-          label: 'My First dataset',
-          backgroundColor: 'rgba(255,99,132,0.2)',
-          borderColor: 'rgba(255,99,132,1)',
+          label: 'Última troca do SIM',
+          backgroundColor: '#0066FF',
+          borderColor: '#0066FF',
           borderWidth: 1,
-          hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-          hoverBorderColor: 'rgba(255,99,132,1)',
+          hoverBackgroundColor: '#0066FF',
+          hoverBorderColor: '#0066FF',
           borderCapStyle: 'round',
-          data: [65, 59, 80, 81, 56, 55, 40]
+          data: [ 45, 90 , 10 ]
         }
       ]
     }, {responsive: true, maintainAspectRatio: false})
