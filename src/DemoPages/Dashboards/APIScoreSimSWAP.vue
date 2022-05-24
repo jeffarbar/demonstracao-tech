@@ -43,7 +43,7 @@
                                         <td colspan="2" style="background:#0066FF; color:#F2F4FF;" ><b>Última troca do SIM em</b></td>
                                     </tr>
                                     <tr>
-                                        <td rowspan="2" style="font-size:65px; color:#F2F4FF; background:#0066FF; text-align: center; vertical-align: middle;"><b>{{this.tag}}</b></td>
+                                        <td rowspan="2" style="font-size:56px; color:#F2F4FF; background:#0066FF; text-align: center; vertical-align: middle;"><b>{{this.tag}}</b></td>
                                         <td rowspan="2" style="text-align: center; vertical-align: middle;"><b>Mais de<p style="font-size:15px; color:#0066FF;">{{this.max}} dias</p></b></td>
                                         <td rowspan="2" style="text-align: center; vertical-align: middle;"><b>Menos de<p style="font-size:15px; color:#0066FF;">{{this.min}} dias</p></b></td>
                                     </tr>
