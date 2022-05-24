@@ -8,7 +8,7 @@
 
                     <div class="modal-body"  style="background-color:#F2F4FF;">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;
                         <img width="190" height="190" src="@/assets/images/telefonica_login.png" alt="">
                          <br><br>
                         
