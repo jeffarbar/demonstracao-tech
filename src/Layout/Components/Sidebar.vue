@@ -47,7 +47,7 @@
                     },
                     {
                         title: 'Risk & Credit Management',
-                        icon: 'pe-7s-filter',
+                        icon: 'pe-7s-graph2',
                         child: [
                             {
                                 href: '/api/perfil-digital',
@@ -76,7 +76,7 @@
                     },
                     {
                         title: 'Digital Identity & Fraud',
-                        icon: 'pe-7s-calculator',
+                        icon: 'pe-7s-medal',
                         child: [
                             {
                                 href: '/api/score-b2b',

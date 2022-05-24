@@ -15,10 +15,17 @@
                                 <div class="col-md-3">
                                     <div class="position-relative form-group">
                                         Número de CPF:
+                                        <!--
                                         <input placeholder="627.585.390-55" 
                                             v-model="cpf"
                                             v-mask="'###.###.###-##'"
                                             type="text" class="mb-1 form-control">
+                                        -->
+                                        <select class="mb-1 form-control" v-model="cpf">
+                                            <option>102.663.067-30</option>
+                                            <option>406.666.228-50</option>
+                                            <option>359.896.158-84</option>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -38,6 +45,7 @@
                             :value="this.score"
                             currentValueText="O valor do Score é ${value}"
                             :height="178"
+                            :maxValue=20
                             />
                         </div> 
                     </div>
@@ -62,7 +70,7 @@
 
 <script>
 
-    import axios from "axios";
+    //import axios from "axios";
 
     import PageTitle from "../../Layout/Components/PageTitle.vue";
     //import VuePerfectScrollbar from 'vue-perfect-scrollbar'
@@ -108,7 +116,7 @@
             subheading: 'Otimize informações para a tomada de decisões de risco no processo de análise de crédito ao consumidor.',
             icon: 'pe-7s-piggy icon-gradient bg-tempting-azure',
             produto:'PRODUTO',
-            cpf: '627.585.390-55',
+            cpf: '102.663.067-30',
             score: 0,
             mostra_grafico: false,
             json_response: '',
@@ -121,15 +129,25 @@
                 //let produto_formato = this.produto.replace("(","").replace(")","").replace("-","")
                 let cpf_formato= this.cpf.replaceAll(".","").replace("-","")    
 
+                if(cpf_formato == '10266306730'){
+                     this.score = 17
+                }else if(cpf_formato == '35989615884'){
+                     this.score = 15
+                }else{
+                     this.score = 12
+                }
+
+                let json = "{\"cpf\": \""+cpf_formato+"\", \"score\": \""+this.score+"\" }"
+
+                this.json_response = JSON.parse(json)
+                this.mostra_grafico = true
+
+                /*
                 axios.get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
                     .then((res) => {
                         console.log(res.data)
-                        //this.score = res.data.remaining
-                        //this.json_response = res.data
                         this.score = Math.round(Math.random() * 1000 )
                         let json = "{\"cpf\": \""+cpf_formato+"\", \"score\": \""+this.score+"\" }"
-                        
-                        console.log(json)
 
                         this.json_response = JSON.parse(json)
                         this.mostra_grafico = true
@@ -140,8 +158,7 @@
                         this.json_response = error
                         this.mostra_grafico = false
                     });
-
-               
+                    */
             }
         }
     }

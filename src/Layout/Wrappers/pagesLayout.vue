@@ -6,12 +6,17 @@
 
 <script>
 
+
   export default {
-    name: 'app',
+    //name: 'app',
+    name: 'pagesLayoutDemonstracao',
     components: {
+  
     },
     methods:{
 
     }
   }
 </script>
+
+

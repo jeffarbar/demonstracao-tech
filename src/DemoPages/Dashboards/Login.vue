@@ -1,64 +1,65 @@
 <template>
     <div>
-        <div class="modal">
-        <mdb-modal>
-            <!--<notifications></notifications>-->
-            <md-card class="md-card-plain">
-                <md-card-header>
-                    <h4 class="title text-center"><strong>Logar</strong></h4>
-                </md-card-header>
-                <md-card-content>
-                 
-                    <div class="md-layout-item md-size-100">
-                        <md-field>
-                            <label>Email</label>
-                            <md-input v-model="login.email" type="email"></md-input>
-                        </md-field>
-                        <md-field>
-                            <label>Senha</label>
-                            <md-input v-model="login.senha" type="password"></md-input>
-                        </md-field>
-                    </div>
-                    <div class="md-layout-item md-size-100">
-                        <p>Esqueceu <a href="#" @click="esqueceuSenha();">Senha?</a></p>
-                    </div>
-                    <div class="md-layout-ite md-size-100 text-right">
+        <notifications group="app"/>
+        <div  style="background-color:#0066FF;">
+            <div class="d-flex h-100 justify-content-center align-items-center">
+                <b-col md="3">
+                  
+
+                    <div class="modal-body"  style="background-color:#F2F4FF;">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img width="190" height="190" src="@/assets/images/telefonica_login.png" alt="">
+                         <br><br>
                         
-                        <md-button class="md-round md-info" @click="logar()" >
-                            <md-icon>thumb_up</md-icon>
-                            Entrar 
-                        </md-button>
+                        <b-form-group id="exampleInputGroup1"
+                                        label-for="exampleInput1"
+                                        description="Entre com o seu e-mail">
+
+                            <b-form-input id="exampleInput1"
+                                            type="email"
+                                            class="mb-2 form-control-sm"
+                                            required
+                                            v-model="login.email"
+                                            placeholder="E-mail...">
+                            </b-form-input>
+                        </b-form-group>
+                        <b-form-group id="exampleInputGroup2"
+                                        label-for="exampleInput2"
+                                        description="Entre com a sua senha">
+                            <b-form-input id="exampleInput2"
+                                            type="password"
+                                            class="mb-2 form-control-sm"
+                                            required
+                                            v-model="login.senha"
+                                            placeholder="Senha...">
+                            </b-form-input>
+                        </b-form-group>
+                        <b-form-group id="exampleInputGroup3"
+                                        label-for="exampleInput3"
+                                        description=".">
+                                        
+                            <div class="float-right">
+                                <button @click="logar" class="btn btn-info-new">Entrar</button>
+                            </div>
+
+                        </b-form-group>
                     </div>
 
-                </md-card-content>
-                <footer class="footer">
-                    <div class="md-layout-item md-size-100 text-right">
-                        <p>Não é um membro? <a href="#/registro"> Inscrever-se</a></p>
+                    <div class="text-center text-white opacity-4 mt-3">
+                        <h7>&copy; {{ new Date().getFullYear() }} Tech IoT de Big Data</h7>
                     </div>
-                </footer>
-            </md-card>
-        </mdb-modal>
+                </b-col>
+            </div>
+        </div>
     </div>
-    <div class="copyright" >
-        &copy; {{ new Date().getFullYear() }}
-        Tech IoT de Big Data<br>
-    </div>
-   </div>
 </template>
 
 <script>
-  import { mdbModal } from 'mdbvue';
+ 
   export default {
-    name: 'loginDemonstracao1',
+    name: 'loginDemonstracao',
     components: {
-      mdbModal
     },
     data() {
       return {
@@ -70,96 +71,61 @@
       };
     },
     created(){
-        //this.usuario = this.$localStorage.clear()
-    },
+        this.usuario = this.$localStorage.clear()
+    },  
     methods: {
 
-        esqueceuSenha(){
-         
-            let self = this
-            if( this.login == null || this.login.email == null || this.login.email == "" ){
-                console.log( "Campo em branco" )
-                self.$notify({
-                    message:
-                        "Favor preencher o email",
-                        icon: "add_alert",
-                        horizontalAlign: 'center',
-                        verticalAlign: 'top',
-                        type: 'warning'
-                    });
-            }else{
-               
-                this.$http.post('/login/esqueceuSenha',
-                    this.login
-                )    
-                .then(function(response) {
-                    console.log(response)
-                    self.$notify({
-                        message:
-                        "Email de alteração de senha enviado",
-                        icon: "add_alert",
-                        horizontalAlign: 'center',
-                        verticalAlign: 'top',
-                        type: 'success'
-                    });
-                }).catch(e => {
-                    console.log( "ERRO NO LOGIN " +e )
-                    //self.$localStorage.clear()
-                    self.$notify({
-                    message:
-                        "Lamentamos, mas ocorreu um erro na sua solicitação",
-                        icon: "add_alert",
-                        horizontalAlign: 'center',
-                        verticalAlign: 'top',
-                        type: 'danger'
-                    });
-                })
-            }
-        },
         logar(){
 
             let self = this
             if( this.login == null || this.login.email == null || this.login.senha == null
             || this.login.email == "" || this.login.senha == "" ){
                 console.log( "Campo em branco" )
-                //self.$localStorage.clear()
-                self.$notify({
-                    message:
-                        "Favor preencher todos os campos",
-                        icon: "add_alert",
-                        horizontalAlign: 'center',
-                        verticalAlign: 'top',
-                        type: 'warning'
-                    });
+                self.$localStorage.clear()
+                this.$notify({
+                    group: 'app',
+                    type: 'error',
+                    title: 'Mensagem importante',
+                    duration: 5000,
+                    text: 'Favor preencher todos os campos'
+                });
+                
             }else{
                
-                this.$http.post('/login/session',
-                    this.login
-                )    
-                .then(function(response) {
-                    self.$localStorage.set('usuario', response.data)
-                    self.$router.push('maps') 
-                }).catch(e => {
-                    console.log( "ERRO NO LOGIN " +e )
-                    //self.$localStorage.clear()
+                var md5 = require('md5');
+
+                var hash_email = md5(this.login.email);
+                var hash_senha = md5(this.login.senha);
+
+                if (hash_email == 'bd3ab9c6fdd362ddfd01e969cc73f699' && 
+                    hash_senha == '5df0b5feaf0282faf66cf1ada111b799'){
+
+                    this.$localStorage.set('usuario', this.login)
+                    if (this.$route.path != '/api/perfil-digital') {
+                        this.$router.push("/api/perfil-digital");
+                    }
+            
+                }else{
+                    self.$localStorage.clear()
                     this.$notify({
-                        message:
-                            "Lamentamos, mas ocorreu um erro na sua solicitação",
-                            icon: "add_alert",
-                            horizontalAlign: 'center',
-                            verticalAlign: 'top',
-                            type: 'danger'
-                    });
-                })
+                        group: 'app',
+                        type: 'error',
+                        title: 'Mensagem importante',
+                        duration: 5000,
+                        text: 'Lamentamos, senha ou login inválida!'
+                    });    
+
+                }
+            
             }
         }
     }
   }
 </script>
 <style>
-.copyright{
-    text-align: center;
-    padding: 50px 40%;
-}
+    .btn-info-new {
+        color: #0066FF;
+        background-color: #F2F4FF;
+        border-color: #0066FF;
+    }
 </style>
-

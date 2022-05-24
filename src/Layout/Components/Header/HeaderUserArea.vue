@@ -7,9 +7,17 @@
                         <div class="widget-heading" style="color:#F2F4FF">Big Data&nbsp;&nbsp;</div>
                     </div>
                     <div class="widget-content-left">
-                         <div class="icon-wrapper icon-wrapper-alt rounded-circle">
-                            <img width="65" class="rounded-circle" src="@/assets/images/avatars/telefonica.png" alt="">
-                        </div>
+                        <b-dropdown toggle-class="p-0 mr-2" menu-class="dropdown-menu-lg" variant="link" right>
+                            <span slot="button-content">
+                                <!--
+                                <div class="icon-wrapper icon-wrapper-alt rounded-circle">
+                                    <img width="64" height="64" class="rounded-circle" src="@/assets/images/avatars/telefonica.png" alt="">
+                                </div>
+                                -->
+                                 <img width="80" height="80" class="rounded-circle" src="@/assets/images/avatars/telefonica.png" alt="">
+                            </span>
+                            <button type="button" tabindex="0" @click="logoff" class="dropdown-item">Sair</button>
+                        </b-dropdown>
                         <!--
                         <b-dropdown toggle-class="p-0 mr-2" menu-class="dropdown-menu-lg" variant="link" right>
                             <span slot="button-content">
@@ -78,8 +86,22 @@
         data: () => ({
 
         }),
+        mounted() {
+            this.valida();
+        },
+        methods: {
+            valida(){
+                let usuario = this.$localStorage.get('usuario')
 
-        methods: {}
+                if(usuario == null || usuario == undefined){
+                    this.logoff()
+                }
+            },
+            logoff(){
+                this.$localStorage.clear()
+                this.$router.push('/') 
+            }
+        }
     }
 
 

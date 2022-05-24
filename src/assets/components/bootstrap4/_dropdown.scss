@@ -150,6 +150,7 @@
     @include gradient-bg($dropdown-link-hover-bg);
   }
 
+
   &.active,
   &:active {
     color: $dropdown-link-active-color;
@@ -181,7 +182,7 @@
   font-size: $font-size-sm;
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a
-}
+} 
 
 // Dropdown text
 .dropdown-item-text {

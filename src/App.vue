@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  const default_layout = "default";
+  const default_layout = "userpages";
 
   export default {
     computed: {

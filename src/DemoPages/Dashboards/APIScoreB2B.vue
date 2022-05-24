@@ -11,7 +11,23 @@
                             <h5 class="card-title">Dados de entrada</h5>
                             
                             <div class="form-row">
-
+                                
+                                <div class="col-md-3">
+                                    <div class="position-relative form-group">
+                                        Número de CPF:
+                                        <!--
+                                        <input placeholder="627.585.390-55" 
+                                            v-model="cpf"
+                                            v-mask="'###.###.###-##'"
+                                            type="text" class="mb-1 form-control">
+                                        -->
+                                        <select class="mb-1 form-control" v-model="cpf">
+                                            <option>102.663.067-30</option>
+                                             <option>406.666.228-50</option>
+                                            <option>359.896.158-84</option>
+                                        </select>
+                                    </div>
+                                </div>
 
                                 <div class="col-md-3">
                                     <div class="position-relative form-group">
@@ -23,15 +39,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-3">
-                                    <div class="position-relative form-group">
-                                        Número de CPF:
-                                        <input placeholder="627.585.390-55" 
-                                            v-model="cpf"
-                                            v-mask="'###.###.###-##'"
-                                            type="text" class="mb-1 form-control">
-                                    </div>
-                                </div>
+                                
 
                                 <div class="col-md-3">
                                     <div class="position-relative form-group">
@@ -83,7 +91,7 @@
 
 <script>
 
-    import axios from "axios";
+    //import axios from "axios";
 
     import PageTitle from "../../Layout/Components/PageTitle.vue";
     //import VuePerfectScrollbar from 'vue-perfect-scrollbar'
@@ -128,9 +136,9 @@
             heading: 'Match',
             subheading: 'Reduza os riscos em transações eletrônicas por meio de validações digitais de identidade e inteligência antifraude.',
             icon: 'pe-7s-credit icon-gradient bg-tempting-azure',
-            cep:'07600-973',
-            telefone:'(11)91234-5678',
-            cpf: '627.585.390-55',
+            cep:'04313-210',
+            telefone:'(11)998834485',
+            cpf: '102.663.067-30',
             score: 0,
             mostra_grafico: false,
             json_response: '',
@@ -144,6 +152,47 @@
                 let telefone_formato = this.telefone.replace("(","").replace(")","").replace("-","")
                 let cpf_formato= this.cpf.replaceAll(".","").replace("-","")    
 
+                if(cpf_formato == '10266306730'){
+                    if(telefone_formato == '11998834485' && cep_formato == '04313210'){
+                        this.score = 813
+                    }else if(telefone_formato == '11998834485'){
+                        this.score = 534
+                    }else if(cep_formato == '04313210'){
+                        this.score = 608
+                    }else{
+                        this.score = 320
+                    }
+                     
+                }else if(cpf_formato == '35989615884'){
+                    if(telefone_formato == '11956002044' && cep_formato == '06414025'){
+                        this.score = 798
+                    }else if(telefone_formato == '11956002044'){
+                        this.score = 512
+                    }else if(cep_formato == '06414025'){
+                        this.score = 591
+                    }else{
+                        this.score = 259
+                    }
+                }else if(cpf_formato == '40666622850'){
+                    if(telefone_formato == '11912867662' && cep_formato == '09360500'){
+                        this.score = 910
+                    }else if(telefone_formato == '11912867662'){
+                        this.score = 601
+                    }else if(cep_formato == '09360500'){
+                        this.score = 588
+                    }else{
+                        this.score = 105
+                    }
+                }else{
+                     this.score = 12
+                }
+
+                let json = "{\"msisdn\": \""+telefone_formato+"\",\"cpf\": \""+cpf_formato+"\",\"cep\": \""+cep_formato+"\", \"score\": "+this.score+" }"
+                        
+                this.json_response = JSON.parse(json)
+                this.mostra_grafico = true
+
+                /*
                 axios.get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
                     .then((res) => {
                         console.log(res.data)
@@ -163,7 +212,7 @@
                         this.json_response = error
                         this.mostra_grafico = false
                     });
-
+                */
                
             }
         }
