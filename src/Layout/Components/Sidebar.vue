@@ -81,14 +81,7 @@
                             {
                                 href: '/api/score-b2b',
                                 title: 'Antifraude',
-                            }
-                        ]
-                    },
-
-                    {
-                        title: 'Fraudes de SIM Swap',
-                        icon: 'pe-7s-medal',
-                        child: [
+                            },
                             {
                                 href: '/api/score-simswap',
                                 title: 'SIM Swap',
