@@ -81,11 +81,11 @@
                             {
                                 href: '/api/score-b2b',
                                 title: 'Antifraude',
-                            },
-                            {
-                                href: '/api/score-simswap',
-                                title: 'SIM Swap',
                             }
+                            //,{
+                            //    href: '/api/score-simswap',
+                            //    title: 'SIM Swap',
+                            //}
                         ]
                     },
 

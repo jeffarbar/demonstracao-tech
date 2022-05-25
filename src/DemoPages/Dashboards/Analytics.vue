@@ -136,6 +136,7 @@
             </div>
         </div>
 
+<!--
 
         <div class="mb-3 card">
             
@@ -270,6 +271,8 @@
                 </div>
             </div>
         </div>
+
+-->        
     </div>
 
 </template>
@@ -281,8 +284,8 @@
 
     import {Money} from 'v-money'
 
-    import chart_ks_tipico from '../Charts/Chartjs/KS_tipico'
-    import chart_ks_perfil_digital from '../Charts/Chartjs/KS_perfil_digital'
+    //import chart_ks_tipico from '../Charts/Chartjs/KS_tipico'
+    //import chart_ks_perfil_digital from '../Charts/Chartjs/KS_perfil_digital'
     //import chart1 from './Analytics/chart2';
 
     // import chart2 from './Analytics/chart2';
@@ -314,8 +317,8 @@
             PageTitle,
            // VuePerfectScrollbar,
            // 'font-awesome-icon': FontAwesomeIcon,
-            chart_ks_tipico,
-            chart_ks_perfil_digital,
+            //chart_ks_tipico,
+            //chart_ks_perfil_digital,
             Money
         },
         data: () => ({
