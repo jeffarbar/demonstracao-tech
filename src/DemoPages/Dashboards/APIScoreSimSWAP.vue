@@ -112,7 +112,7 @@
             setInterval(() => (this.toggle = !this.toggle), 1111);
         },
         data: () => ({
-            heading: 'SIM Swap',
+            heading: 'Protect',
             subheading: 'Proteja seus clientes de operações fraudulentas com trocas de SIM recentes',
             icon: 'pe-7s-credit icon-gradient bg-tempting-azure',
             telefone:'(11)99883-4485',
