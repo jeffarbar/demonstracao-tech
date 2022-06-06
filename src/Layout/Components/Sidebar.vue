@@ -51,7 +51,7 @@
                         child: [
                             {
                                 href: '/api/perfil-digital',
-                                title: 'Perfil Digital',
+                                title: 'Scoring',
                             },
                             {
                                 href: '/analytics',
@@ -80,11 +80,11 @@
                         child: [
                             {
                                 href: '/api/score-b2b',
-                                title: 'Antifraude',
+                                title: 'Match',
                             }
                             ,{
                                 href: '/api/score-simswap',
-                                title: 'SIM Swap',
+                                title: 'Protect',
                             }
                         ]
                     },
