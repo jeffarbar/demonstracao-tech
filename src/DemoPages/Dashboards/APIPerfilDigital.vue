@@ -112,7 +112,7 @@
             setInterval(() => (this.toggle = !this.toggle), 1111);
         },
         data: () => ({
-            heading: 'Perfil Digital',
+            heading: 'Scoring',
             subheading: 'Otimize informações para a tomada de decisões de risco no processo de análise de crédito ao consumidor.',
             icon: 'pe-7s-piggy icon-gradient bg-tempting-azure',
             produto:'PRODUTO',
