@@ -133,7 +133,7 @@
             setInterval(() => (this.toggle = !this.toggle), 1111);
         },
         data: () => ({
-            heading: 'Antifraude',
+            heading: 'Match',
             subheading: 'Reduza os riscos em transações eletrônicas por meio de validações digitais de identidade e inteligência antifraude.',
             icon: 'pe-7s-credit icon-gradient bg-tempting-azure',
             cep:'04313-210',
